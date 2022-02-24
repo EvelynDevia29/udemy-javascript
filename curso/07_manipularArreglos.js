@@ -32,7 +32,7 @@ console.log(ultimoElemento);
 
 //map  -- no modifica el origen es inmutable
 
-var estudiantes =['Dayana','Monica','Carlos','Freddy'];
+var estudiantes = ['Dayana', 'Monica', 'Carlos', 'Freddy'];
 var asistencia = estudiantes.map((nombre) => {
     return {
         nombre: nombre,
@@ -44,7 +44,7 @@ console.log(estudiantes);
 console.log(asistencia);
 console.log(estudiantes);
 
-var estudiantes =['Dayana','Monica','Carlos','Freddy'];
+var estudiantes = ['Dayana', 'Monica', 'Carlos', 'Freddy'];
 var asistencia = estudiantes.map((nombre) => `${nombre}.`);
 console.log(estudiantes);
 console.log(asistencia);
@@ -54,11 +54,11 @@ console.log(estudiantes);
 //con la busqueda
 
 var estudiantes = [
-    { nombre: 'Monica', edad:39, matriculado: true},
-    { nombre: 'Juan', edad:41, matriculado: false},
-    { nombre: 'Carlos', edad:26, matriculado: true},
-    { nombre: 'Milena', edad:19, matriculado: false},
-    { nombre: 'Sara', edad:34, matriculado: true},
+    { nombre: 'Monica', edad: 39, matriculado: true },
+    { nombre: 'Juan', edad: 41, matriculado: false },
+    { nombre: 'Carlos', edad: 26, matriculado: true },
+    { nombre: 'Milena', edad: 19, matriculado: false },
+    { nombre: 'Sara', edad: 34, matriculado: true },
 ];
 
 var filtrado = estudiantes.filter((estudiante) => estudiante.matriculado && estudiante.edad >= 21);
@@ -66,21 +66,21 @@ console.log(estudiantes);
 console.log(filtrado);
 
 //some every : verifica si al menos unos de tdos los elementos cumple
-//con una condicion especifica, si cumple retona ture y false si no
+//con una condicion especifica, si cumple retorna true y false si no
 //y every retorna valor logico si todos los elmentos del arreglo cumplen con
 //la condicion que le especifiquemos
 
 //SOME
 //let numeros =[1,2,3,4,5,6,7,8,9,10];
-let numeros =[1,3,5,7,9];
+let numeros = [1, 3, 5, 7, 9];
 
-let resultado = numeros.some((numero)=>numero % 2 === 0);
+let resultado = numeros.some((numero) => numero % 2 === 0);
 console.log(resultado);
 
 
 //EVERY
-let numeros =[2,4,6,8,10,1];
-var resultado = numeros.every((numero)=>numero % 2 === 0);
+let numeros = [2, 4, 6, 8, 10, 1];
+var resultado = numeros.every((numero) => numero % 2 === 0);
 console.log(resultado);
 
 
@@ -90,15 +90,15 @@ console.log(resultado);
 //con la busqueda
 
 var clientes = [
-    {id: 1, nombre:'Monica'},
-    {id: 2, nombre:'Maria'},
-    {id: 3, nombre:'Valeria'},
-    {id: 4, nombre:'Miguel'},
-    {id: 5, nombre:'Nacho'},
+    { id: 1, nombre: 'Monica' },
+    { id: 2, nombre: 'Maria' },
+    { id: 3, nombre: 'Valeria' },
+    { id: 4, nombre: 'Miguel' },
+    { id: 5, nombre: 'Nacho' },
 ];
 
-var cliente = clientes.find((cliente)=>cliente.id === 1);
-var filtrado = clientes.filter((cliente)=>cliente.id === 1);
+var cliente = clientes.find((cliente) => cliente.id === 1);
+var filtrado = clientes.filter((cliente) => cliente.id === 1);
 console.log(clientes);
 console.log(cliente);
 console.log(filtrado);
@@ -106,12 +106,80 @@ console.log(filtrado);
 //FINDINDEX: retorna la posicion del elemento dentro del array y nos
 //devuelve un unico valor
 var clientes = [
-    {id: 1, nombre:'Monica'},
-    {id: 2, nombre:'Maria'},
-    {id: 3, nombre:'Valeria'},
-    {id: 4, nombre:'Miguel'},
-    {id: 5, nombre:'Nacho'},
+    { id: 1, nombre: 'Monica' },
+    { id: 2, nombre: 'Maria' },
+    { id: 3, nombre: 'Valeria' },
+    { id: 4, nombre: 'Miguel' },
+    { id: 5, nombre: 'Nacho' },
 ];
-var posicion = clientes.findIndex((cliente) => cliente.id ===2);
+var posicion = clientes.findIndex((cliente) => cliente.id === 2);
 console.log(posicion);
 console.log(clientes[posicion]);
+
+//includes : ayuda a determinar si en un arrgelo existe un elemento en especifico
+//y nos devuelve verdadero o falso segun corresponda
+
+var mascotas = ['perro', 'gato', 'conejo'];
+var resultado = mascotas.includes('gato');
+console.log(resultado);
+console.log('monica'.includes('s'));
+
+//ejercicio de buscador
+var buscador = (parametro) => {
+    let clientes = [
+        { id: 1, nombre: 'Monica' },
+        { id: 2, nombre: 'Maria' },
+        { id: 3, nombre: 'Valeria' },
+        { id: 4, nombre: 'Miguel' },
+        { id: 5, nombre: 'Nacho' },
+    ];
+    return clientes.filter((cliente)=> cliente.nombre.includes(parametro));
+}
+console.log(buscador('ia'));
+
+//JOIN: método que nos ayuda a unir todos los elementos de un arreglo
+//y generar un string a partir de esa unión
+//OJO: join no puede covertir un array de objetos en un string
+
+var elementos = ['aire','fuego','agua','amor'];
+var resultado = elementos.join(',');
+console.log(resultado);
+
+var clientes = [
+    { id: 1, nombre: 'Monica' },
+    { id: 2, nombre: 'Maria' },
+    { id: 3, nombre: 'Valeria' },
+    { id: 4, nombre: 'Miguel' },
+    { id: 5, nombre: 'Nacho' },
+];
+
+//console.log(clientes.join());
+
+//Ejemplo: generar un archivo .csv a partir de los datos de 
+//nuestros clientes para posteriormente abrirlos en un Excel
+//las claves del arrgelo u objeto son los encabezados de las
+//columnas en excel
+
+//Object.values: retorna lo valores unicamente del objeto
+
+console.log(Object.values({ id: 1, nombre: 'Monica' }));
+
+//Object.keys : duelve los nombres de las llaves
+console.log(Object.keys({ id: 1, nombre: 'Monica' }));
+
+var clientes = [
+    { id: 1, nombre: 'Monica' },
+    { id: 2, nombre: 'Maria' },
+    { id: 3, nombre: 'Valeria' },
+    { id: 4, nombre: 'Miguel' },
+    { id: 5, nombre: 'Nacho' },
+];
+var csvGenerator = (array, separador = ',') => {
+    let cabecera = Object.keys(array[0]).join(separador);
+    let data = array.map((element) => Object.values(element).join(separador));
+    console.log(cabecera);
+    data.forEach(element => console.log(element))
+}
+csvGenerator(clientes);
+
+
