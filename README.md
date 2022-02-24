@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-✨Les cuento que me encuentro en autoaprendizaje de este hermoso y poderoso lenguaje de programación asi que he decido hacer un repo con los mejores cursos de JavaScript, en este caso de Udemy para el que fui beneficiada 100% con mi certificación y todo.✨
+✨Les cuento que me encuentro en autoaprendizaje de este hermoso y poderoso lenguaje de programación asi que he decidido hacer un repo con los mejores cursos de JavaScript, en este caso de Udemy para el que fui beneficiada 100% con mi certificación y todo.✨
 
 ### Acerca de este curso
 __Aprende los fundamentos y crea un proyecto REST API con Node JS.__
