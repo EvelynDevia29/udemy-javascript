@@ -182,4 +182,43 @@ var csvGenerator = (array, separador = ',') => {
 }
 csvGenerator(clientes);
 
+//concat * sort * splice * slice
 
+var array1 = [1, 2, 3, 4, 5];
+var array2 = [6, 7, 8, 9, 0];
+
+//unir los dos arreglos
+array3= array1.concat(array2);
+array4 = [...array1, ...array2];
+console.log(array1);
+console.log(array2);
+console.log(array3);
+console.log(array4);
+
+//Sort, metodo de ordenamiento basado por defecto en codis ASCII
+var array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+console.log(array1.sort());
+
+var arrayMeses = ['Dic', 'Ene', 'Mar', 'Feb'];
+console.log(arrayMeses.sort());
+
+var array = [1, 10000, 21, 30, 4];
+var ordenado = array.sort((a,b) => b - a);
+console.log(ordenado);
+
+//splice: remueve o modifica elemento de un array , o al array en si
+//xxx.splice(parameter1,parameter2,parameter3)
+//parameter1: posicion desde donde incia la eliminacion
+//parameter2: cantidad de elementos a eliminar a apartir del parameter1
+//parameter3: reemplaza el elemento del array por otro
+var nombres = ['Monica', 'Evelyn', 'Miguel', 'Sara'];
+nombres.splice(1,2,'Esteban');
+console.log(nombres);
+
+//slice: retorna una copia de una parte mas pequeña de un array
+//no incluye la última posicion
+var nombres = ['Monica', 'Evelyn', 'Miguel', 'Sara'];
+
+var copiaNombres = nombres.slice(1,4);
+console.log(copiaNombres);
+console.log(nombres);
